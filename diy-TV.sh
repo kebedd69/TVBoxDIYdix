@@ -6,7 +6,7 @@ num=$(find $CURRENT_DIR -name gradlew | grep -v exo | awk -F"/" '{print NF-1}')
 DIR=$(find $CURRENT_DIR -name gradlew | grep -v exo | cut -d \/ -f$num)
 cd $CURRENT_DIR/$DIR
 #添加预置接口
-sed -i "s|^\(create\).*\(0\)$|\1\(\'https:\/\/hutool.ml\/tang\', \2|" $CURRENT_DIR/$DIR/app/src/main/java/com/fongmi/android/tv/bean/Config.java
+#sed -i "s|^\(create\).*\(0\)$|\1\(\'https:\/\/hutool.ml\/tang\', \2|" $CURRENT_DIR/$DIR/app/src/main/java/com/fongmi/android/tv/bean/Config.java
 #sed -i "s|^\(create\).*\(1\)$|\1\(\'https:\/\/agit.ai\/hfr1107\/vvbox\/raw\/branch\/main\/live\/zb.txt\', \2|" $CURRENT_DIR/$DIR/app/src/main/java/com/fongmi/android/tv/bean/Config.java
 #sed -i "s|^\(create\).*\(2\)$|\1\(\'https:\/\/tool.weetai.cn\/api\', \2|" $CURRENT_DIR/$DIR/app/src/main/java/com/fongmi/android/tv/bean/Config.java
 #删除release的APK
